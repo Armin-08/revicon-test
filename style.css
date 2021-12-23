@@ -367,6 +367,10 @@ body {
   background-color: #F8F9FA;
 }
 
+.tutorial-text-box {
+  position: relative;
+}
+
 .tutorial-text-box .tut-category {
   font-size: 12px;
   color: #D51A22;
@@ -471,5 +475,16 @@ body {
 
 .nav-box .nav-link.active {
   background-color: transparent;
+}
+
+.watch-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.watch-video i {
+  font-size: 30px;
+  color: #D51A22;
 }
 /*# sourceMappingURL=style.css.map */

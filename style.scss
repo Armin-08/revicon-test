@@ -279,6 +279,7 @@ body {
     background-color: #F8F9FA;
 }
 .tutorial-text-box {
+    position: relative;
     .tut-category {
         font-size: 12px;
         color: #D51A22;
@@ -354,5 +355,14 @@ body {
         &.active {
             background-color: transparent;
         }
+    }
+}
+.watch-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    i {
+        font-size: 30px;
+        color: #D51A22;
     }
 }
