@@ -1,0 +1,358 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+.above-track {
+    background-color: #D51A22;
+    padding: 5px 30px;
+    .container-fluid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .social-icons {
+        display: flex;
+        align-items: center;
+        a {
+            display: flex;
+            align-items: center;
+            padding: 0 5px;
+            &:first-of-type {
+                padding-left: 0;
+            }
+            &:last-of-type {
+                padding-right: 0;
+            }
+            i {
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+    }
+    .open-search {
+        span {
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        a {
+            i {
+                color: #fff;
+            }
+        }
+    }
+}
+.search-modal {
+    position: absolute;
+    top: 34px;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #D51A22;
+    border-top: 1px solid #fff;
+    z-index: 1000;
+    @media only screen and (min-width: 992px) {
+        height: 150px;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    form {
+        position: relative;
+        width: 100%;
+        .form-control {
+            width: 100%;
+            position: relative;
+            background-color: transparent;
+            border-radius: 0;
+            border: none;
+            height: 50px;
+            border-bottom: 2px solid #fff;
+            font-size: 16px;
+            font-style: italic;
+            color: #fff;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+        .btn {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: none;
+            height: 100%;
+            font-size: 14px;
+            background-color: transparent;
+            i {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+#header {
+
+}
+.navbar {
+    padding: 20px 30px;
+    .navbar-brand {
+        margin: 0;
+        padding: 0;
+    }
+    .dropdown-menu {
+        width: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 49px;
+        border: none;
+        border-top: 3px solid #D51A22;
+        border-radius: 0px;
+        .dropdown-item {
+            &:hover {
+                background-color: #D51A22;
+                color: #fff;
+            }
+        }
+    }
+    .nav-item {
+        position: relative;
+        padding: 0 30px;
+        &:first-of-type {
+            padding-left: 0;
+        }
+        &:last-of-type {
+            padding-right: 0;
+        }
+        &.active {
+            .nav-link {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 3px;
+                    width: 100%;
+                    background-color: #D51A22;
+                }
+            }
+        }
+        .nav-link {
+            padding: 0;
+            color: #000;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: bold;
+            position: relative;
+            &:hover {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 3px;
+                    width: 100%;
+                    background-color: #D51A22;
+                }
+            }
+            i {
+                margin-left: 10px;
+                transition: .5s;
+            }
+        }
+        &.show {
+            i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+.os-scrollbar-track {
+    background: rgba(213, 26, 34, 0.3) !important;
+}
+.os-theme-dark>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle {
+    background-color: #D51A22;
+}
+.carousel {
+    .carousel-caption {
+        right: auto;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: auto;
+        transition: .5s;
+        h1 {
+            font-size: 30px;
+            max-width: 400px;
+            text-align: left;
+        }
+        &:hover {
+            text-decoration: none;
+            color: #D51A22;
+        }
+    }
+    .carousel-indicators li {
+        opacity: 1;
+        background-color: #fff;
+        &.active {
+            background-color: #D51A22;
+        }
+    }
+    .carousel-control-next, .carousel-control-prev {
+        width: 10%;
+        opacity: 1;
+        i {
+            font-size: 50px;
+            transition: .5s;
+        }
+        &:hover {
+            i {
+                color: #D51A22;
+            }
+        }
+    }
+}
+.title-warning {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #EEEEEE;
+    padding: 30px;
+    margin-bottom: 40px;
+    h3 {
+        font-size: 30px;
+        font-weight: bold;
+        color: #D51A22;
+        i {
+            margin-left: 10px;
+        }
+    }
+    p {
+        color: #000;
+        font-size: 18px;
+        font-weight: bold;
+        max-width: 600px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
+.section {
+    &.hero-section {
+        position: relative;
+        height: 700px;
+        img {
+            height: 100%;
+            object-fit: cover;
+            height: 700px;
+        }
+    }
+    &.tutorial-section {
+        padding: 40px 0px;
+        .tab-pane {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+            transition: .5s;
+            &:hover {
+                transform: scale(1.03);
+            }
+            img {
+                max-width: 260px;
+                height: 260px;
+                object-fit: cover;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+.tut-boxes {
+    padding: 40px 0px;
+    background-color: #F8F9FA;
+}
+.tutorial-text-box {
+    .tut-category {
+        font-size: 12px;
+        color: #D51A22;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    .tut-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    .tut-desc {
+        margin-bottom: 10px;
+    }
+    .tut-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        font-weight: bold;
+        .tut-adv {
+            display: inline-block;
+            margin: 0px 15px;
+        }
+    }
+    .view-more {
+        display: flex;
+        align-items: center;
+        color: #D51A22;
+        font-weight: bold;
+        i {
+            font-size: 12px;
+            margin-left: 10px;
+        }
+    }
+}
+.nav-box {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+    height: 300px;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+    transition: .5s;
+    &:hover {
+        transform: scale(1.03);
+    }
+    .nav-link {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin-bottom: 15px;
+        img {
+            max-width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        .tut-category {
+            font-size: 12px;
+            color: #D51A22;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        .tut-title {
+            font-size: 16px;
+            color: black;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        &.active {
+            background-color: transparent;
+        }
+    }
+}
