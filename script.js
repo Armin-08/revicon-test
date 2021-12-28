@@ -19,3 +19,22 @@ $('.nav-box').overlayScrollbars({
 $('[data-fancybox]').fancybox({
 	// Options will go here
 });
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:30,
+    nav:true,
+	dots: false,
+	navText: ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5.5
+        }
+    }
+})
